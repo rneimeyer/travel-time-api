@@ -17,7 +17,7 @@
 
 Travel Time is a travel tracker where users can plan for future trips. Users can enter a trip with their budget and dates and add potential options of flights and hotels to choose the best option for them. Users can store data from a variety of airlines and hotel brands to see everthing in one place.
 
-This app will include a backend database using Django and SQL and a frontend web application using Node.js and React.
+This app will include a backend database using MongoDB and Express.js and a frontend web application using Node.js and React.
 
 ## User Stories
 
