@@ -1,57 +1,57 @@
-//trip controller
+//hotel controller
 const express = require('express');
 const router = express.Router();
 
 //import model
-const Trip = require("./../models/Trip")
+const Hotel = require("./../models/Hotel")
 
-//returns all trips
+//returns all hotels
 router.get("/", (req, res) => {
-    Trip.find({}).then((trip) => {
+    Hotel.find({}).then((hotel) => {
         res.json({
             status: 200,
-            trip: trip,
+            hotel: hotel,
         });
     });
 });
 
-//returns a single trip and its data
+//returns a single hotel and its data
 router.get("/:id", (req, res) => {
-    Trip.findById(req.params.id).then((trip) => {
+    Hotel.findById(req.params.id).then((hotel) => {
         res.json({
             status: 200,
-            trip: trip,
+            hotel: hotel,
         })
     })
 })
 
-//create new trip
+//create new hotel
 router.post("/", (req, res) => {
-    const tripData = req.body;
-    Trip.create(tripData).then((trip) => {
+    const hotelData = req.body;
+    Hotel.create(hotelData).then((hotel) => {
         res.json({
             status: 200,
-            trip: trip,
+            hotel: hotel,
         })
     })
 })
 
-//update trip
+//update hotel
 router.put("/:id", (req, res) => {
-    Trip.findByIdAndUpdate(req.params.id, req.body, { new: true }).then((trip) => {
+    Hotel.findByIdAndUpdate(req.params.id, req.body, { new: true }).then((hotel) => {
         res.json({
             status: 200,
-            trip: trip,
+            hotel: hotel,
         })
     })
 })
 
-//delete trip
+//delete hotel
 router.delete("/:id", (req, res) => {
-    Trip.findByIdAndDelete(req.params.id).then((trip) => {
+    Hotel.findByIdAndDelete(req.params.id).then((hotel) => {
         res.json({
             status: 200,
-            trip: trip,
+            hotel: hotel,
         })
     })
 })
