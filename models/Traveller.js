@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const travellerSchema = new Schema({
   name: String,
-  email: {type: String, unique: true},
+  email: String,
   trips: [{ type: Schema.Types.ObjectId, ref: "Trip" }],
 });
 
