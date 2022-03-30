@@ -7,7 +7,7 @@ const Trip = require("./../models/Trip")
 
 //returns all trips
 router.get("/", (req, res) => {
-    Trip.find({}).then((trip) => {
+    Trip.find({}).populate('flights').populate('hotels').then((trip) => {
         res.json({
             status: 200,
             trip: trip,
@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 
 //returns a single trip and its data
 router.get("/:id", (req, res) => {
-    Trip.findById(req.params.id).then((trip) => {
+    Trip.findById(req.params.id).populate('flights').populate('hotels').then((trip) => {
         res.json({
             status: 200,
             trip: trip,
