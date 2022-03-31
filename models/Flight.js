@@ -3,7 +3,7 @@ const mongoose = require("./../db/connection");
 const Schema = mongoose.Schema;
 
 const flightSchema = new Schema({
-    flight_ype: String,
+    flight_type: String,
   airline: String,
   flight_number: String,
   date: Date,
