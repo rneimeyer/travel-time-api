@@ -8,6 +8,7 @@ const travellerController = require('./controllers/travellerController')
 const tripController = require('./controllers/tripController')
 const hotelController = require('./controllers/hotelController')
 const flightController = require('./controllers/flightController')
+const activityController = require('./controllers/activityController')
 
 const app = express()
 app.use(express.urlencoded({extended:false}))
@@ -23,6 +24,7 @@ app.use('/traveller', travellerController)
 app.use('/trip', tripController)
 app.use('/hotel', hotelController)
 app.use('/flight', flightController)
+app.use('/activity', activityController)
 
 
 app.listen(PORT, () => {console.log(`listening on port ${PORT}`)})
