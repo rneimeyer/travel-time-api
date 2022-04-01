@@ -9,6 +9,7 @@ const tripSchema = new Schema({
   end_date: Date,
   hotels: [{ type: Schema.Types.ObjectId, ref: "Hotel" }],
   flights: [{ type: Schema.Types.ObjectId, ref: "Flight" }],
+  activities: [{ type: Schema.Types.ObjectId, ref: "Activity" }],
 });
 
 module.exports = mongoose.model("Trip", tripSchema);
