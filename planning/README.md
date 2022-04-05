@@ -1,10 +1,5 @@
 # Project Overview
 
-[Deployed Backend](https://apple-sundae-53642.herokuapp.com/)
-
-[Deployed Frontend](https://rneimeyer.github.io/travel-time-client/)
-
-[Frontend Repo](https://github.com/rneimeyer/travel-time-client)
 
 ## Project Schedule
 
